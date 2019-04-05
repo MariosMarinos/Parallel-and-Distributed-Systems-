@@ -55,6 +55,9 @@ public class ServerProtocol {
 				theOutput = "THERE IS NO ELEMEMNT WITH THIS KEY";
 			}
 		}
+		else {
+			theOutput = "THERE IS NO COMMAND AS THIS";
+		}
 		return theOutput;
 	}
 }
