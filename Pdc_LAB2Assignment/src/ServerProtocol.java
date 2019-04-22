@@ -27,27 +27,12 @@ public class ServerProtocol {
 			ArrayList<String> Temp = new ArrayList<String>();
 			Temp.add(State);
 			Temp.add(Time);
-			// 5 secs for adding or chane an element.
-			try {
-				System.out.println("Sleeping...");
-				Thread.sleep(5000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
 			DetailsTable.put(Parts[1],Temp);
 			theOutput = "WOK" ;
 		}
 		else if (Parts[0].startsWith("REMOVE")) {
 			if (DetailsTable.containsKey(Parts[1])) {
 				// 5 secs for deleting an element.
-				try {
-					System.out.println("Sleeping...");
-					Thread.sleep(5000);
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
 				DetailsTable.remove(Parts[1]);
 				theOutput = "SUCCESSFULLY REMOVED";
 			}
